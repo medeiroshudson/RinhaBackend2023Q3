@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{E7034589-41F9-48E4-81D4-27B77E5F9D36}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Domain", "1 - Domain", "{5E233911-059F-4981-99F3-102BF873A2C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{407D03FC-43FC-49F1-A841-456689E424D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infra", "3 - Infra", "{9B0A0B80-7154-40B8-9E7F-7527DBF6F748}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RinhaBackend2023Q3.Application", "2 - Application\RinhaBackend2023Q3.Application\RinhaBackend2023Q3.Application.csproj", "{10E59C7C-80BF-48EA-BACB-D332787CCD23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RinhaBackend2023Q3.Domain", "1 - Domain\RinhaBackend2023Q3.Domain\RinhaBackend2023Q3.Domain.csproj", "{5AAD314B-9074-43B8-95AA-AEB7B9C8C428}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RinhaBackend2023Q3.Infra.Data", "3 - Infra\RinhaBackend2023Q3.Infra.Data\RinhaBackend2023Q3.Infra.Data.csproj", "{7ED90E72-7A14-43E8-8A84-1A5EA7908EA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10E59C7C-80BF-48EA-BACB-D332787CCD23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10E59C7C-80BF-48EA-BACB-D332787CCD23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10E59C7C-80BF-48EA-BACB-D332787CCD23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10E59C7C-80BF-48EA-BACB-D332787CCD23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AAD314B-9074-43B8-95AA-AEB7B9C8C428}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AAD314B-9074-43B8-95AA-AEB7B9C8C428}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AAD314B-9074-43B8-95AA-AEB7B9C8C428}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AAD314B-9074-43B8-95AA-AEB7B9C8C428}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ED90E72-7A14-43E8-8A84-1A5EA7908EA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ED90E72-7A14-43E8-8A84-1A5EA7908EA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ED90E72-7A14-43E8-8A84-1A5EA7908EA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ED90E72-7A14-43E8-8A84-1A5EA7908EA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{10E59C7C-80BF-48EA-BACB-D332787CCD23} = {407D03FC-43FC-49F1-A841-456689E424D7}
+		{5AAD314B-9074-43B8-95AA-AEB7B9C8C428} = {5E233911-059F-4981-99F3-102BF873A2C7}
+		{7ED90E72-7A14-43E8-8A84-1A5EA7908EA3} = {9B0A0B80-7154-40B8-9E7F-7527DBF6F748}
+	EndGlobalSection
+EndGlobal
