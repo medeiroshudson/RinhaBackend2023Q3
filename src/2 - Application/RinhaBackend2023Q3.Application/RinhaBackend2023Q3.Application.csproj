@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\1 - Domain\RinhaBackend2023Q3.Domain\RinhaBackend2023Q3.Domain.csproj" />
+    <ProjectReference Include="..\..\3 - Infra\RinhaBackend2023Q3.Infra.Data\RinhaBackend2023Q3.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>

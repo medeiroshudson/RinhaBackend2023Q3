@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\1 - Domain\RinhaBackend2023Q3.Domain\RinhaBackend2023Q3.Domain.csproj" />
+    <ProjectReference Include="..\..\2 - Application\RinhaBackend2023Q3.Application\RinhaBackend2023Q3.Application.csproj" />
+    <ProjectReference Include="..\RinhaBackend2023Q3.Infra.Data\RinhaBackend2023Q3.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>

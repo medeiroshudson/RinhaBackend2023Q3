@@ -1,4 +1,4 @@
-﻿namespace RinhaBackend2023Q3.Domain;
+﻿namespace RinhaBackend2023Q3.Domain.Interfaces;
 
 public interface IEntity
 {
