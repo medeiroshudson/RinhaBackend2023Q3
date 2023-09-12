@@ -12,4 +12,8 @@
     <ProjectReference Include="..\RinhaBackend2023Q3.Infra.Data\RinhaBackend2023Q3.Infra.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CrossCutting\" />
+  </ItemGroup>
+
 </Project>

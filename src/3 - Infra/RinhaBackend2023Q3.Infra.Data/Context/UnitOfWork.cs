@@ -5,32 +5,32 @@ namespace RinhaBackend2023Q3.Infra.Data;
 
 public class UnitOfWork : IUnitOfWork
 {
-    private readonly ApplicationDbContext _dbContext;
     private bool _disposed;
+    private readonly ApplicationDbContext _dbContext;
 
     public UnitOfWork(ApplicationDbContext dbContext)
     {
         _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
     }
 
-    public void Commit() => _dbContext.SaveChanges();
+    public async Task CommitAsync() => await _dbContext.SaveChangesAsync();
 
-    public void Rollback() => _dbContext.ChangeTracker.Entries().ToList().ForEach(x => x.Reload());
-
-    public void Dispose()
+    public async ValueTask DisposeAsync()
     {
-        this.Dispose(true);
+        await DisposeAsync(true);
         GC.SuppressFinalize(this);
     }
 
-    protected virtual void Dispose(bool disposing)
+    protected virtual async ValueTask DisposeAsync(bool disposing)
     {
-        if (_disposed)
-            return;
+        if (!_disposed)
+        {
+            if (disposing)
+            {
+                await _dbContext.DisposeAsync();
+            }
 
-        if (disposing && _dbContext != null)
-            _dbContext.Dispose();
-
-        _disposed = true;
+            _disposed = true;
+        }
     }
 }

@@ -1,8 +1,6 @@
 ﻿namespace RinhaBackend2023Q3.Domain.Interfaces.Infra.Context;
 
-public interface IUnitOfWork : IDisposable
+public interface IUnitOfWork : IAsyncDisposable
 {
-    void Commit();
-    void Rollback();
-    //Task<int> SaveAndRemoveCache(CancellationToken cancellationToken, params string[] cacheKeys);
+    Task CommitAsync();
 }

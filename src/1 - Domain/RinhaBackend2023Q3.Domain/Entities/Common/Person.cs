@@ -7,4 +7,3 @@ public class Person : AuditableEntity
     public DateTime BirthDate { get; set; }
     public ICollection<string>? Stack { get; set; }
 }
- 

@@ -17,15 +17,25 @@ public sealed class PersonService : IPersonService
         _unitOfWork = unitOfWork;
     }
 
-    public Person? Get(Guid id) => _context.GetById<Person>(id);
+    public async Task<Person?> Get(Guid id) => await _context.GetByIdAsync<Person>(id);
 
-    public ICollection<Person> GetAll() => _context.GetAll<Person>();
+    public async Task<ICollection<Person>> GetAll() => await _context.GetAllAsync<Person>();
 
-    public Person Add(Person person)
+    public async Task Add(Person person)
     {
-        _context.Add(person);
-        _unitOfWork.Commit();
+        await _context.AddAsync(person);
+        await _unitOfWork.CommitAsync();
+    }
 
-        return person;
+    public async Task Update(Person person)
+    {
+        await _context.UpdateAsync(person);
+        await _unitOfWork.CommitAsync();
+    }
+
+    public async Task Delete(Guid id)
+    {
+        await _context.RemoveAsync<Person>(id);
+        await _unitOfWork.CommitAsync();
     }
 }

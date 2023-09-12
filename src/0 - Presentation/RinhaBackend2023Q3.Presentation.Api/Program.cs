@@ -1,4 +1,4 @@
-using RinhaBackend2023Q3.Infra;
+using RinhaBackend2023Q3.Infra.CrossCutting;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;

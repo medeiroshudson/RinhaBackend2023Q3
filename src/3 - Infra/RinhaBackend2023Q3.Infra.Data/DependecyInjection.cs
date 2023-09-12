@@ -15,16 +15,16 @@ public static class DependencyInjection
     {
         var connectionString = configuration.GetConnectionString("Database");
 
-        services.AddScoped<IUnitOfWork, UnitOfWork>();
-
         services.AddDbContext<ApplicationDbContext>(opt =>
         {
             opt.UseNpgsql(
                 connectionString,
                 builder =>
                     builder.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)
-            ).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+            );
         });
+
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
 
         return services;
     }

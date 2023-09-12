@@ -3,7 +3,7 @@ using RinhaBackend2023Q3.Application;
 using RinhaBackend2023Q3.Infra.Data;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace RinhaBackend2023Q3.Infra
+namespace RinhaBackend2023Q3.Infra.CrossCutting
 {
     public static class DependencyInjection
     {

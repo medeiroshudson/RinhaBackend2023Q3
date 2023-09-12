@@ -4,7 +4,9 @@ namespace RinhaBackend2023Q3.Domain.Interfaces.Services;
 
 public interface IPersonService
 {
-    Person? Get(Guid id);
-    ICollection<Person> GetAll();
-    Person Add(Person person);
+    Task<Person?> Get(Guid id);
+    Task<ICollection<Person>> GetAll();
+    Task Add(Person person);
+    Task Update(Person person);
+    Task Delete(Guid id);
 }
